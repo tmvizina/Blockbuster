@@ -18,11 +18,17 @@ namespace Blockbuster
         {
             //Think of this constructor as stocking our shelves in block buster with Movies
             List<string> shrekScenes = new List<string>() { "What are you doing in my swamp", "Shrek meets Donkey", "Castle scene", "Dragon fight scene" };
-            DVD d = new DVD("Shrek", Genre.Drama, 120, shrekScenes);
+            DVD dvd = new DVD();
+            VHS vhs = new VHS();
 
+           DVD d1 = new DVD();
+
+            Movie shrek = new Movie("Shrek", Genre.Drama, 120, shrekScenes,dvd);
 
             List<string> meanGirls = new List<string>() { "First day at school", "You must wear pink on Wednesdays", "Riot scene", "Who's afraid of Regina?" };
-            DVD d2 = new DVD("Mean Girls", Genre.Comedy, 133, meanGirls);
+
+            Movie meangirls = new Movie("Mean Girls", Genre.Comedy, 133, meanGirls, dvd);
+          
             //You cant call the constructor on abstract classes
             //In abstract classes constructors exist for the children 
             //Think of the children!
@@ -30,18 +36,20 @@ namespace Blockbuster
 
 
             List<string> dieHardScenes = new List<string>() { "Plane scene", "Snape takes over the building", "John McLane sneaks around", "Shoot out by the vault" };
-            VHS v = new VHS("Die Hard", Genre.Action, 120, dieHardScenes);
+
+            Movie diehard = new Movie("Die Hard", Genre.Action, 120, dieHardScenes,vhs);
 
             List<string> lordOfTheRingsScenes = new List<string>() { "Hobbiton", "Fireworks", "Mines of Moria", "Orcs attack" };
-            VHS v2 = new VHS("Fellowship of the Ring", Genre.Drama, 225, lordOfTheRingsScenes);
+     
+            Movie lotr = new Movie("Fellowship of the Ring", Genre.Drama, 225, lordOfTheRingsScenes,vhs);
 
 
 
-            Movies.Add(v);
+            Movies.Add(shrek);
            // Movies.Add(m);
-            Movies.Add(v2);
-            Movies.Add(d);
-            Movies.Add(d2);
+            Movies.Add(meangirls);
+            Movies.Add(diehard);
+            Movies.Add(lotr);
         }
 
         //2 Reasons why we can use the movie class
