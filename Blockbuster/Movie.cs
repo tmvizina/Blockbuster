@@ -58,9 +58,9 @@ namespace Blockbuster
 
         //Virtual == the child has the option to override the method
         //Abstract == the child MUST override this method
-        public void Play(List<string> Scenes)
+        public void Play()
         {
-            MovieType.Play(Scenes);
+ //           MovieType.Play(Scenes);
         }
         
 

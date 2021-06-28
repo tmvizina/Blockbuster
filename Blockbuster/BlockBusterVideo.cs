@@ -80,7 +80,7 @@ namespace Blockbuster
 
             Movie m = GetMovie(index);
 
-            m.PlayWholeMovie();
+            m.MovieType.Play(m.Scenes);
         }
     }
 }
